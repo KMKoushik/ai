@@ -64,7 +64,7 @@ function parseAnthropicStream(): (data: string) => string | void {
     const text = json.completion;
     if (
       !previous ||
-      (text.length > previous.length && text.startsWith(previous))
+      (text.startsWith(previous))
     ) {
       const delta = text.slice(previous.length);
       previous = text;
